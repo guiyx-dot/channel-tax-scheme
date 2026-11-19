@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>通道配置 · 税务方案 · 需求说明</title>
+  <style>
+    :root { --bg: #f3f5f7; --ink: #1f1f1f; --sub: #595959; --line: #e6e8eb; --teal: #13c2c2; --red: #cf1322; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; font-size: 14px; line-height: 1.6; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 20px 64px; }
+    h1 { margin: 0; font-size: 26px; }
+    h2 { margin: 0 0 12px; font-size: 16px; }
+    .lead { margin: 8px 0 0; color: var(--sub); }
+    .card { background: #fff; border-radius: 12px; padding: 18px; margin-top: 16px; }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+    td:first-child { white-space: nowrap; width: 88px; }
+    th { background: #fafafa; color: var(--sub); font-weight: 550; }
+    .mark { display: inline-block; border-radius: 4px; font-size: 12px; padding: 0 6px; line-height: 20px; background: #fff1f0; color: var(--red); }
+    figure { margin: 14px 0 0; }
+    img { width: 100%; border: 1px solid var(--line); border-radius: 8px; }
+    figcaption { margin-top: 8px; color: var(--sub); font-size: 12px; }
+    .dialog { margin-top: 14px; border: 1px solid var(--line); border-radius: 8px; background: #fff; overflow: hidden; }
+    .dialog header { display: flex; justify-content: space-between; align-items: center; padding: 14px 20px; border-bottom: 1px solid var(--line); font-weight: 600; }
+    .dialog header span { color: #bfbfbf; font-weight: 400; }
+    .form { padding: 18px 28px 22px; font-size: 13px; }
+    .row { display: grid; grid-template-columns: 108px 1fr; gap: 12px; align-items: start; margin-top: 16px; }
+    .row:first-child { margin-top: 0; }
+    .label { text-align: right; color: #8c8c8c; line-height: 32px; }
+    .label.top { line-height: 22px; padding-top: 2px; }
+    .field { min-width: 0; }
+    input[type="text"] { height: 32px; border: 1px solid #d9d9d9; border-radius: 4px; padding: 0 10px; color: #bfbfbf; background: #f5f5f5; width: 100%; font: inherit; }
+    input.num { width: 72px; text-align: center; color: var(--ink); background: #fff; }
+    input.num.off { color: #bfbfbf; background: #f5f5f5; }
+    .unit { margin-left: 8px; color: #595959; }
+    .checks { display: flex; flex-wrap: wrap; gap: 10px 22px; padding-top: 5px; }
+    .opt { display: inline-flex; align-items: center; gap: 6px; color: #262626; white-space: nowrap; }
+    .box, .radio { width: 14px; height: 14px; border: 1px solid #d9d9d9; background: #fff; flex: none; }
+    .box { border-radius: 2px; }
+    .radio { border-radius: 50%; }
+    .box.on { background: var(--teal); border-color: var(--teal); position: relative; }
+    .box.on:after { content: ""; position: absolute; left: 4px; top: 1px; width: 3px; height: 7px; border: solid #fff; border-width: 0 2px 2px 0; transform: rotate(45deg); }
+    .radio.on { border-color: var(--teal); position: relative; }
+    .radio.on:after { content: ""; position: absolute; inset: 3px; border-radius: 50%; background: var(--teal); }
+    .age { display: flex; flex-direction: column; gap: 10px; }
+    .age div, .cross { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .new { background: #f7fffe; border: 1px dashed #87e8de; border-radius: 6px; padding: 8px 10px; }
+    .new .opt { margin-right: 18px; }
+    .hint { margin: 8px 0 0; color: var(--sub); font-size: 12px; }
+    .info { display: inline-flex; width: 14px; height: 14px; border-radius: 50%; border: 1px solid #bfbfbf; color: #8c8c8c; font-size: 11px; align-items: center; justify-content: center; margin-left: 4px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>通道配置 · 税务方案</h1>
+    <p class="lead">数字中台「权益供应路由(新) → 权益供应配置(新)」的配置通道里，适用场景下方新增税务方案。单选，非必填。历史数据先空着。</p>
+
+    <section class="card">
+      <h2>这次改什么</h2>
+      <table>
+        <thead><tr><th></th><th>规则</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>位置</td>
+            <td>配置通道弹窗，适用场景下面、支持跨天打款上面</td>
+          </tr>
+          <tr>
+            <td>字段</td>
+            <td><span class="mark">新增</span> 税务方案。单选：连续劳务、非税方案</td>
+          </tr>
+          <tr>
+            <td>必填</td>
+            <td>非必填。可以两个都不选</td>
+          </tr>
+          <tr>
+            <td>历史数据</td>
+            <td>暂不处理，保持为空</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>调整后的配置弹窗</h2>
+      <div class="dialog">
+        <header>配置通道<span>×</span></header>
+        <div class="form">
+          <div class="row">
+            <div class="label">通道名称:</div>
+            <div class="field"><input type="text" value="及时发支付宝-拜可-墨行纪" disabled /></div>
+          </div>
+          <div class="row">
+            <div class="label top">适用场景:</div>
+            <div class="checks">
+              <span class="opt"><i class="box"></i>新车场景-新车销售</span>
+              <span class="opt"><i class="box"></i>二手车场景-二手车销售</span>
+              <span class="opt"><i class="box"></i>会员营销-会员营销</span>
+              <span class="opt"><i class="box"></i>事故车场景-事故车佣金</span>
+              <span class="opt"><i class="box"></i>新车场景-新车权益</span>
+              <span class="opt"><i class="box"></i>二手车场景-二手车权益</span>
+              <span class="opt"><i class="box"></i>事故车场景-维修权益</span>
+              <span class="opt"><i class="box"></i>会员营销-会员营销权益</span>
+              <span class="opt"><i class="box on"></i>其他</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="label">税务方案:</div>
+            <div class="field">
+              <div class="new">
+                <span class="opt"><i class="radio"></i>连续劳务</span>
+                <span class="opt"><i class="radio"></i>非税方案</span>
+              </div>
+              <p class="hint">新增在这里。这一例是历史数据，两个都不选。</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="label">支持跨天打款:</div>
+            <div class="cross">
+              <span class="opt"><i class="radio"></i>是</span>
+              <span class="opt"><i class="radio on"></i>否</span>
+              <span>跨天打款间隔天数</span>
+              <input class="num off" type="text" value="请输入" disabled />
+              <span>天</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="label">年龄限制:</div>
+            <div class="age">
+              <div><span>最小年龄</span><input class="num" type="text" value="1" disabled /><span class="unit">周岁</span></div>
+              <div><span>最大年龄</span><input class="num" type="text" value="100" disabled /><span class="unit">周岁</span></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="label">是否支持公车:</div>
+            <div class="cross">
+              <span class="opt"><i class="radio"></i>是</span>
+              <span class="opt"><i class="radio"></i>否</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="label">商品限制:</div>
+            <div class="cross">
+              <span class="opt"><i class="radio"></i>支付宝通用金plus专属</span>
+              <span class="opt"><i class="radio"></i>其他商品<i class="info">i</i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>当前页面</h2>
+      <figure>
+        <img src="assets/channel-tax/01-dialog.png" alt="权益供应配置的配置通道弹窗" />
+        <figcaption>权益供应配置(新) → 配置通道。税务方案加在适用场景和「支持跨天打款」之间。</figcaption>
+      </figure>
+    </section>
+  </div>
+</body>
+</html>
